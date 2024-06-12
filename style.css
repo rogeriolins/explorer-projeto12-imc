@@ -209,6 +209,36 @@ form button:hover {
   visibility: visible;
 }
 
+/* Modal Error  */
+.error-wrapper {
+  background-color: var(--color-bg-error);
+  color: var(--color-white);
+
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+
+  padding: 0.8rem 0;
+
+  font-size: 1.6rem;
+  font-weight: bold;
+
+  position: absolute;
+  height: 3.6rem;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transform: translateY(-3rem);
+  transition: transform 0.5s;
+}
+
+.error-wrapper.open {
+  visibility: visible;
+  opacity: 1;
+}
+
 /* Media Querys */
 @media only screen and (max-width: 460px) {
   form {

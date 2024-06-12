@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cálculadora de IMC</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="assets/balanca.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Defer: coloco o carregamento do JS no final de carregar a DOM -->
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <main class="card">
+        <form>
+          <h1 class="title">Cálculo de IMC</h1>
+          <div class="input-wrapper">
+            <label for="peopleWeight">Peso (kg)</label>
+            <input
+              type="text"
+              name="peopleWeight"
+              id="peopleWeight"
+              placeholder="86"
+            />
+          </div>
+          <div class="input-wrapper">
+            <label for="peopleHeight">Altura (m)</label>
+            <input
+              type="text"
+              name="peopleHeight"
+              id="peopleHeight"
+              placeholder="184"
+            />
+          </div>
+          <button>
+            Calcular IMC
+            <img
+              src="assets/arrow-right.svg"
+              alt="Flecha apontando para a direita."
+            />
+          </button>
+        </form>
+      </main>
+    </div>
+
+    <div class="modal-wrapper">
+      <div class="modal card">
+        <h2 class="title">
+          Seu IMC é de 28
+          <button class="close">
+            <img
+              src="./assets/close.svg"
+              alt="Um X representando o Fechar a Janela"
+            />
+          </button>
+        </h2>
+      </div>
+    </div>
+  </body>
+</html>

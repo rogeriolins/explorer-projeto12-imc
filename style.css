@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --color-bg: #040924;
+  --color-white: #fff;
+  --color-black: #000;
+
+  --color-tt-heading: #0c3440;
+
+  --color-tt-label: #00453a;
+  --color-tt-input: #212529;
+  --color-ot-input: #02799d;
+  --color-bg-input: #dce2e9;
+  --color-bd-input: rgba(73, 80, 87, 0.3);
+  --color-tt-placeholder: rgba(73, 80, 87, 0.5);
+
+  --color-tt-button: var(--color-white);
+  --color-bg-button: #02799d;
+  --color-bg-button-hover: #025c77;
+
+  --color-bg-error: #f03e3e;
+
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-bg);
+}
+
+body,
+input,
+button {
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  place-content: center;
+  padding: 1.6rem;
+}
+
+.title {
+  font-size: 3.2rem;
+  line-height: 4rem;
+  font-weight: bold;
+  color: var(--color-tt-heading);
+}
+
+form {
+  width: 30rem;
+}
+
+form h1 {
+  margin-bottom: 3.2rem;
+}
+
+form label {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: var(--color-tt-label);
+  margin-bottom: 0.8rem;
+  /* Como Label é display inline ele não aceita margim-bottom, para mudar isso é necessário mudar o display dele pra block */
+  display: block;
+}
+
+form input {
+  width: 100%;
+  border: 1px solid var(--color-bd-input);
+  background: var(--color-bg-input);
+  padding: 1.6rem;
+  border-radius: 0.4rem;
+}
+
+form input::placeholder {
+  color: var(--color-tt-placeholder);
+}
+
+/* 
+  Aplica em um input-wrapper que tenha um "input-wrapper" anterior a ele.
+*/
+.input-wrapper + .input-wrapper {
+  margin-top: 1.6rem;
+}
+
+form input:focus {
+  outline: 2px solid var(--color-ot-input);
+}
+
+form button {
+  color: var(--color-tt-button);
+  background-color: var(--color-bg-button);
+  width: 100%;
+  padding: 1.6rem;
+  margin-top: 3.2rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.4rem;
+  border: none;
+
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+
+  cursor: pointer;
+
+  /* Transição suave para o Hover */
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: var(--color-bg-button-hover);
+}
+
+.card {
+  margin-inline: auto;
+  max-width: 42.8rem;
+
+  padding: 4.8rem 6.4rem 6.4rem;
+  background-color: var(--color-white);
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.6rem;
+}
+
+/* Fonts */
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Modal */
+.modal-wrapper {
+  display: grid;
+  place-content: center;
+
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  /* 
+    As propriedades: top, bottom, right e left podem ser subtituidos por inset
+
+    inset: 0;
+
+   */
+
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal {
+  position: relative;
+}
+
+.modal button {
+  background: none;
+  border: none;
+  position: absolute;
+
+  top: 1.6rem;
+  right: 1.6rem;
+
+  cursor: pointer;
+
+  transition: tranform 0.3s;
+}
+
+.modal button:hover {
+  transform: scale(1.2);
+}
+
+.modal-wrapper.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Media Querys */
+@media only screen and (max-width: 460px) {
+  form {
+    width: 20rem;
+  }
+
+  .card {
+    padding: 2.8rem 3.4rem 3.4rem;
+  }
+}

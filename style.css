@@ -49,7 +49,8 @@ button {
   padding: 1.6rem;
 }
 
-.title {
+.title,
+span {
   font-size: 3.2rem;
   line-height: 4rem;
   font-weight: bold;
@@ -209,7 +210,7 @@ form button:hover {
   visibility: visible;
 }
 
-/* Modal Error  */
+/* Alert Error  */
 .error-wrapper {
   background-color: var(--color-bg-error);
   color: var(--color-white);
@@ -230,11 +231,12 @@ form button:hover {
   visibility: hidden;
   opacity: 0;
 
-  transform: translateY(-3rem);
+  transform: translateY(-3.6rem);
   transition: transform 0.5s;
 }
 
 .error-wrapper.open {
+  transform: translateY(0);
   visibility: visible;
   opacity: 1;
 }

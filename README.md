@@ -19,7 +19,7 @@ Projeto para a formação Fullstack da Rocketseat para ensino de tecnologias WEB
 <br>
 
 <p align="center">
-  <img alt="Projeto Explorer" src=".github/my-cover-jd-desafio-12.jpg" width="100%">
+  <img alt="Projeto Explorer" src=".github/my-cover-projeto12.jpg" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -35,6 +35,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 Proposto 12 - tem as seguintes finalidades:
 
 Cálculo do IMC usando janelas modais e muito Javascript
+Aplicação de Clean Code, Refatoração e Divisão de Responsabilidades
+Imports e Exports (Default, Named, Multiplos)
 
 - [Acesse o projeto finalizado, online](https://rogeriolins.github.io/explorer-projeto12-imc)
 

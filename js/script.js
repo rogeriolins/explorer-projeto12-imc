@@ -7,6 +7,18 @@ const forms = document.querySelector("form")
 const inputWeight = document.querySelector("#peopleWeight")
 const inputHeight = document.querySelector("#peopleHeight")
 
+// Events
+
+// Resultado desafio 01
+// forms.onbeforeinput = (event) => {
+//   if (event.inputType === "insertText") {
+//     AlertError.close()
+//   }
+// }
+// ou
+inputWeight.oninput = () => AlertError.close()
+inputHeight.oninput = () => AlertError.close()
+
 forms.onsubmit = (event) => {
   event.preventDefault()
 
